@@ -1,0 +1,80 @@
+.mini_card_container {
+  width: 100%;
+  min-height: 50vh;
+  background-color: #f6f5f1;
+  @include displayCenter;
+  padding: 3vh 2%;
+}
+.card_mini {
+  @include displayBetween;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(242, 237, 221, 1);
+  border-radius: 20px;
+  .min_left {
+    width: 50%;
+    height: 100%;
+    .min_card_img {
+      width: 70%;
+      display: block;
+      margin: auto;
+    }
+  }
+  .min_right {
+    position: relative;
+    width: 70%;
+    height: 50vh;
+
+    @include displayCenter;
+    justify-content: flex-start;
+    .some_text_mini {
+      font-weight: 400;
+      font-size: $text_lg_size;
+      line-height: 41.02px;
+      color: #282828;
+      width: 65%;
+    }
+    .mini_right_img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-radius: 0 0 20px 0;
+    }
+  }
+}
+@media screen and (max-width: 1022px) {
+  .card_mini {
+    .min_right {
+      .some_text_mini {
+        font-size: $text_lg_size;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .card_mini {
+    flex-direction: column;
+    .min_left {
+      width: 100%;
+    }
+    .min_right {
+      width: 100%;
+      padding-left: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card_mini {
+    .min_right {
+      .some_text_mini {
+        font-size: $text_md_size;
+      }
+      .mini_right_img {
+        width: 50%;
+      }
+    }
+  }
+}

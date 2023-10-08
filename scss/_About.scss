@@ -1,0 +1,78 @@
+// about section style start
+.about {
+  width: 100%;
+  padding: 0 2%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f5f1;
+  position: relative;
+  .about_left {
+    width: 50%;
+    text-align: center;
+    img {
+      display: block;
+      margin: auto;
+      width: 70%;
+    }
+  }
+  .about_right {
+    padding-right: 15%;
+    width: 50%;
+    height: 100%;
+    .about_title {
+      font-size: $text_lg_size;
+      line-height: 28px;
+      font-weight: 600;
+      color: #282828;
+      font-family: Stratos;
+      margin-bottom: 25px;
+    }
+    .about_text {
+      font-size: $text_md_size;
+      line-height: 24px;
+      color: #282828;
+      font-family: Stratos;
+      margin-bottom: 20px;
+    }
+    .about_btn {
+      @include btns;
+      &:hover {
+        background-color: rgba(242, 237, 221, 1);
+      }
+    }
+
+    .without {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 3vh 2%;
+    flex-direction: column;
+    .about_left {
+      width: 100%;
+      img {
+      }
+    }
+    .about_right {
+      width: 100%;
+      padding-left: 10%;
+      padding: 2vh;
+      .about_title {
+      }
+      .about_text {
+        font-size: $text_sm_size;
+      }
+      .without {
+        display: none;
+      }
+    }
+  }
+}
+// about section style end

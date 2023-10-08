@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Stratos;
+  src: url("../assets/fonts/hello_Stratos.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Stratos;
+}
+
+$text_color_white: rgba(246, 245, 241, 1);
+
+// Text size
+$text_heading_lg_size: 48px;
+$text_heading_md_size: 30px;
+$text_heading_sm_size: 25px;
+$text_heading_xs_size: 20px;
+
+$text_lg_size: 22px;
+$text_md_size: 18px;
+$text_sm_size: 14px;
+$text_xs_size: 12px;
+
+// Text color
+$text_greay_color: rgba(52, 77, 50, 1);
+$text_color_282828: #282828;
+$tect_color_grey: rgba(40, 40, 40, 1);
+
+// bg_color
+$bg_color_ore: rgba(242, 237, 221, 1);
+$bg_color_white: #f6f5f1;
+
+// text wegiht
+$text_wegiht_600: 600;
+$text_wegiht_400: 400;
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.inner_container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@mixin displayCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin displayBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  padding: 22px 42px;
+}
+
+@mixin btns {
+  width: 165px;
+  height: 57px;
+  border: 1px solid #282828;
+  border-radius: 30px;
+  background-color: #f6f5f1;
+  @include displayCenter;
+  font-weight: 500;
+  line-height: 13.2px;
+  letter-spacing: 12%;
+  font-size: $text_xs_size;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-family: Stratos;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+  }
+}

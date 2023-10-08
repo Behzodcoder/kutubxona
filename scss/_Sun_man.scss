@@ -1,0 +1,133 @@
+.sun_man_container {
+  background-color: #f6f5f1;
+  padding: 3vh 2%;
+  .sun_man {
+    @include displayCenter;
+    width: 100%;
+    min-height: 432px;
+    border: 0.12rem solid #282828;
+    .sun_man_left {
+      width: 50%;
+      min-height: 432px;
+      border-right: 0.12rem solid #282828;
+      background-color: rgba(242, 237, 221, 1);
+      @include displayCenter;
+      align-items: flex-end;
+      img {
+        margin: auto;
+        width: 80%;
+        display: block;
+      }
+    }
+    .sun_man_right {
+      width: 50%;
+      background-color: transparent;
+      padding: 5%;
+      @include displayBetween;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      color: #344d32;
+      font-family: Stratos;
+
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-align: left;
+        margin-bottom: 35px;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 35px;
+      }
+
+      form {
+        width: 100%;
+        input {
+          width: 100%;
+          border: 1px solid #344d32;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0em;
+          text-align: left;
+          padding: 18px 25px;
+          margin-bottom: 15px;
+          border-radius: 10px;
+
+          &::placeholder {
+            font-family: Stratos;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+        }
+        button {
+          @include btns;
+          width: 100%;
+          text-transform: uppercase;
+          background-color: #282828;
+          color: #f6f5f1;
+          cursor: pointer;
+          &:hover {
+            color: #282828;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .sun_man_container {
+    .sun_man {
+      flex-direction: column;
+      .sun_man_left {
+        border: none;
+        width: 100%;
+        align-items: flex-end;
+        position: relative;
+        border-bottom: 0.12rem solid #282828;
+        img {
+          position: absolute;
+          bottom: 0;
+          width: 70%;
+        }
+      }
+      .sun_man_right {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .sun_man_container {
+    .sun_man {
+      flex-direction: column;
+      .sun_man_left {
+        border: none;
+        width: 100%;
+        align-items: flex-end;
+        position: relative;
+        min-height: 400px;
+        border-bottom: 0.12rem solid #282828;
+        img {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        }
+      }
+      .sun_man_right {
+        width: 100%;
+      }
+    }
+  }
+}
